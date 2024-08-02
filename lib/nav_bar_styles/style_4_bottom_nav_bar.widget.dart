@@ -92,14 +92,14 @@ class _BottomNavStyle4 extends StatelessWidget {
                 color: Colors.transparent,
                 width: navBarEssentials.selectedIndex == 0
                     ? MediaQuery.of(context).size.width * 0.0
-                    : itemWidth * navBarEssentials.selectedIndex,
+                    : itemWidth * navBarEssentials.selectedIndex +  (itemWidth / navBarEssentials.items.length),
                 height: 4,
               ),
               Flexible(
                 child: AnimatedContainer(
                   duration: navBarEssentials.itemAnimationProperties.duration,
                   curve: navBarEssentials.itemAnimationProperties.curve,
-                  width: itemWidth,
+                  width: itemWidth / (navBarEssentials.items.length),
                   height: 4,
                   alignment: Alignment.center,
                   child: Container(
