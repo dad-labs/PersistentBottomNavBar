@@ -92,21 +92,30 @@ class _BottomNavStyle3 extends StatelessWidget {
                 curve: navBarEssentials.itemAnimationProperties.curve,
                 color: Colors.transparent,
                 width: navBarEssentials.selectedIndex == 0
-                    ? (MediaQuery.of(context).size.width * 0.0) + (itemWidth / navBarEssentials.items.length)
-                    : (itemWidth * navBarEssentials.selectedIndex) + (itemWidth / navBarEssentials.items.length),
+                    ? (MediaQuery.of(context).size.width * 0.0) +
+                        (itemWidth / navBarEssentials.items.length)
+                    : (itemWidth * navBarEssentials.selectedIndex) +
+                        (itemWidth / navBarEssentials.items.length),
                 height: 4,
               ),
               Flexible(
                 child: AnimatedContainer(
                   duration: navBarEssentials.itemAnimationProperties.duration,
                   curve: navBarEssentials.itemAnimationProperties.curve,
-                  width:  itemWidth / (navBarEssentials.items.length),
+                  width: itemWidth / (navBarEssentials.items.length),
                   height: 6,
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                    color: selectedItemActiveColor,
-                    borderRadius: BorderRadius.circular(100),
-                  ),
+                      color: selectedItemActiveColor,
+                      borderRadius: BorderRadius.circular(100),
+                      boxShadow: [
+                        BoxShadow(
+                          color: selectedItemActiveColor.withOpacity(0.2),
+                          spreadRadius: 5,
+                          blurRadius: 10,
+                          offset: const Offset(0, 4),
+                        ),
+                      ]),
                 ),
               )
             ],
