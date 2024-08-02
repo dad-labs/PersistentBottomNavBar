@@ -111,7 +111,7 @@ class _BottomNavStyle3 extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                           color: selectedItemActiveColor.withOpacity(0.2),
-                          spreadRadius: 5,
+                          spreadRadius: 3,
                           blurRadius: 10,
                           offset: const Offset(0, 4),
                         ),
