@@ -74,7 +74,7 @@ class _BottomNavStyle3 extends StatelessWidget {
   Widget build(final BuildContext context) {
     final Color selectedItemActiveColor = navBarEssentials
         .items[navBarEssentials.selectedIndex].activeColorPrimary;
-    final double itemWidth = (kIsWeb? 450  : MediaQuery.of(context).size.width -
+    final double itemWidth = (MediaQuery.of(context).size.width -
             ((navBarEssentials.padding.left + navBarEssentials.padding.right) +
                 (navBarEssentials.margin.left +
                     navBarEssentials.margin.right))) /
@@ -92,7 +92,7 @@ class _BottomNavStyle3 extends StatelessWidget {
                 curve: navBarEssentials.itemAnimationProperties.curve,
                 color: Colors.transparent,
                 width: navBarEssentials.selectedIndex == 0
-                    ? (kIsWeb? 450 : MediaQuery.of(context).size.width * 0.0) +
+                    ? (MediaQuery.of(context).size.width * 0.0) +
                         (itemWidth / navBarEssentials.items.length)
                     : (itemWidth * navBarEssentials.selectedIndex) +
                         (itemWidth / navBarEssentials.items.length),
