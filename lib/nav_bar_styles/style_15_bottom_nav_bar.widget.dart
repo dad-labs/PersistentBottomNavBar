@@ -92,11 +92,11 @@ class _BottomNavStyle15 extends StatelessWidget {
               child: Stack(
                 children: <Widget>[
                   Transform.translate(
-                    offset: const Offset(0, -23),
+                    offset: const Offset(0, -30),
                     child: Center(
                       child: Container(
-                        width: 150,
-                        height: height,
+                        width: 200,
+                        height: 200,
                         margin: const EdgeInsets.only(top: 2),
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
@@ -139,25 +139,27 @@ class _BottomNavStyle15 extends StatelessWidget {
                     const SizedBox.shrink()
                   else
                     Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Material(
-                        type: MaterialType.transparency,
-                        child: FittedBox(
-                            child: Text(
-                          item.title!,
-                          style: item.textStyle != null
-                              ? (item.textStyle!.apply(
-                                  color: isSelected
-                                      ? (item.activeColorSecondary ??
-                                          item.activeColorPrimary)
-                                      : item.inactiveColorPrimary))
-                              : TextStyle(
-                                  color: isSelected
-                                      ? (item.activeColorPrimary)
-                                      : item.inactiveColorPrimary,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 12),
-                        )),
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 30),
+                        child: Material(
+                          type: MaterialType.transparency,
+                          child: FittedBox(
+                              child: Text(
+                            item.title!,
+                            style: item.textStyle != null
+                                ? (item.textStyle!.apply(
+                                    color: isSelected
+                                        ? (item.activeColorSecondary ??
+                                            item.activeColorPrimary)
+                                        : item.inactiveColorPrimary))
+                                : TextStyle(
+                                    color: isSelected
+                                        ? (item.activeColorPrimary)
+                                        : item.inactiveColorPrimary,
+                                    fontWeight: FontWeight.w400,
+                                    fontSize: 12),
+                          )),
+                        ),
                       ),
                     )
                 ],
